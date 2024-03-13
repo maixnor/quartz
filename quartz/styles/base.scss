@@ -95,7 +95,6 @@ a {
   }
 
   &.removed-link {
-    pointer-events: none; /* trick to disable Popover Previews */
     background-color: unset;
     font-weight: unset;
     color: unset;
