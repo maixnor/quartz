@@ -86,6 +86,21 @@ a {
     }
   }
 
+  &.missing-link {
+    color: var(--error);
+    font-weight: normal;
+    &:hover {
+      color: color-mix(in srgb, var(--error) 65%, transparent) !important;
+    }
+  }
+
+  &.removed-link {
+    pointer-events: none; /* trick to disable Popover Previews */
+    background-color: unset;
+    font-weight: unset;
+    color: unset;
+  }
+
   &.external .external-icon {
     height: 1ex;
     margin: 0 0.15em;
