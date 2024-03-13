@@ -10,6 +10,10 @@ this is a reference to the [[missing link]] which can also have an alias [[missi
 
 Although this should be a valid link [[configuration#Plugins|plugins]].
 
+And the link to [[404]] is added by a plugin.
+
+Also this goes to a tag [[plugins]].
+
 ## 🪴 Get Started
 
 Quartz requires **at least [Node](https://nodejs.org/) v18.14** and `npm` v9.3.1 to function correctly. Ensure you have this installed on your machine before continuing.
