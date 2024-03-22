@@ -113,6 +113,8 @@ export const FolderPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOpt
         })
 
         fps.push(fp)
+
+        ctx.allSlugs = [...new Set([...ctx.allSlugs, simplifySlug(slug)])]
       }
       return fps
     },

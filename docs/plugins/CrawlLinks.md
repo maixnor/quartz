@@ -13,10 +13,16 @@ This plugin parses links and processes them to point to the right places. It is 
 # Testing puropose only
 
 should be there:
-- [[Plugins]]
+- [[plugins]]
+- [[tags]]
+- [[tags/feature]]
+- [[tags/feature/emitter]]
 - [[configuration]]
 
 should not be there:
+- [[Tags]]
+- [[tags/nonesense]]
+- [[tags/feature/nonesense]]
 - [[Configuration]]
 
 This plugin accepts the following configuration options:
