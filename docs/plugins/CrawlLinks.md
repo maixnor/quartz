@@ -9,6 +9,16 @@ This plugin parses links and processes them to point to the right places. It is 
 > [!note]
 > For information on how to add, remove or configure plugins, see the [[Configuration#Plugins|Configuration]] page.
 
+
+# Testing puropose only
+
+should be there:
+- [[Plugins]]
+- [[configuration]]
+
+should not be there:
+- [[Configuration]]
+
 This plugin accepts the following configuration options:
 
 - `markdownLinkResolution`: Sets the strategy for resolving Markdown paths, can be `"absolute"` (default), `"relative"` or `"shortest"`. You should use the same setting here as in [[Obsidian compatibility|Obsidian]].
