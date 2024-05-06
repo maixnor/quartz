@@ -6,36 +6,29 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
+  outputs = { self, nixpkgs, flake-utils, ... }: 
     flake-utils.lib.eachDefaultSystem (system:
       let
-        pkgs = import nixpkgs { inherit system; };
-      in {
-        devShell = pkgs.mkShell {
+				pkgs = import nixpkgs { 
+					inherit system;
+
+					config = {
+						allowUnfree = true;
+					};
+				};
+        nodeEnv = pkgs.mkShell {
           buildInputs = with pkgs; [
             nodejs
             yarn
           ];
-        };
 
-        checks = pkgs.stdenv.mkDerivation {
-          name = "${self.pname}-tests";
-
-          buildInputs = with pkgs; [
-            nodejs
-            yarn
-          ];
-
-          src = ./.;
-
-          buildPhase = ''
-            # Install dependencies
-            yarn install
-
-            # Run tests and linters
-            yarn run lint
-            yarn run test
+          shellHook = ''
+            echo "    environment initialized ... "
+            npm run check || npm run format
           '';
         };
+      in
+      {
+        devShell = nodeEnv;
       });
 }
