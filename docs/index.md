@@ -12,7 +12,9 @@ Although this should be a valid link [[configuration#Plugins|plugins]].
 
 And the link to [[404]] is added by a plugin.
 
-Also this goes to a tag [[plugins]].
+Also this goes to a folder [[plugins]].
+
+This is a tag: [[tags/feature/filter]]
 
 ## 🪴 Get Started
 
