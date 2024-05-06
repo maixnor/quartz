@@ -129,6 +129,7 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options> | undefined> =
 
                   // add a css class to internal links if missing (or hide links if configured so)
                   if (isMissing) {
+                    console.log("isMissing: " + simple + " at page: " + curSlug)
                     node.properties.className.push(
                       opts.hideMissingLinks ? "removed-link" : "missing-link",
                     )

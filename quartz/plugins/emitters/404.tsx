@@ -3,7 +3,7 @@ import { QuartzComponentProps } from "../../components/types"
 import BodyConstructor from "../../components/Body"
 import { pageResources, renderPage } from "../../components/renderPage"
 import { FullPageLayout } from "../../cfg"
-import { FilePath, FullSlug } from "../../util/path"
+import { FilePath, FullSlug, simplifySlug } from "../../util/path"
 import { sharedPageComponents } from "../../../quartz.layout"
 import { NotFound } from "../../components"
 import { defaultProcessedContent } from "../vfile"
@@ -54,6 +54,9 @@ export const NotFoundPage: QuartzEmitterPlugin = () => {
         tree,
         allFiles: [],
       }
+
+      ctx.allSlugs = [...new Set([...ctx.allSlugs, slug])]
+      console.log("adding: " + slug)
 
       return [
         await write({
