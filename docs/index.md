@@ -6,8 +6,10 @@ Quartz is a fast, batteries-included static-site generator that transforms Markd
 
 ## Missing Link
 
+### Red
 this is a reference to the [[missing link]] which can also have an alias [[missing link|here]].
 
+### Blue
 Although this should be a valid link [[configuration#Plugins|plugins]].
 
 And the link to [[404]] is added by a plugin.
